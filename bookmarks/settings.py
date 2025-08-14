@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # 3RD PARTY
     "social_django",
     "django_extensions",
+    "easy_thumbnails",
     # LOCAL
     "images.apps.ImagesConfig",
 ]
