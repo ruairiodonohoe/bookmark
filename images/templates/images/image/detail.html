@@ -62,7 +62,8 @@
                 formData.append("action", likeButton.dataset.action);
                 options["body"] = formData;
 
-                // send HTTP requestfetch(url, options)
+                // send HTTP request
+                fetch(url, options)
                     .then(response => response.json())
                     .then(data => {
                         if (data["status"] === "ok"){
@@ -70,7 +71,7 @@
 
                             // toggle button text and data-action
                             var action = previousAction== "like" ? "unlike" : "like";
-                            likeBtton.dataset.action = action;
+                            likeButton.dataset.action = action;
                             likeButton.innerHTML = action;
 
                             // update like count
